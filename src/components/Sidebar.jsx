@@ -1,4 +1,5 @@
 import { LayoutDashboard, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -6,15 +7,15 @@ export default function Sidebar() {
       <div className="p-6 text-xl font-bold">InvoiceGen</div>
 
       <nav className="px-4 space-y-2">
-        <a className="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800" href="/">
+        <Link className="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800" to="/dashboard">
           <LayoutDashboard size={18} />
           Dashboard
-        </a>
+        </Link>
 
-        <a className="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800" href="/invoices">
+        <Link className="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800" to="/invoices">
           <FileText size={18} />
           Invoices
-        </a>
+        </Link>
       </nav>
     </aside>
   );
