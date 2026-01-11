@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
             });
 
             const { token: newToken, user: userData } = response.data;
-
+            console.log(userData)
             setToken(newToken);
             setUser(userData); // Adjust based on your actual API response structure where user might be just name or obj
 

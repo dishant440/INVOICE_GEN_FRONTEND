@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
+  console.log(user);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const handleLogout = () => {
@@ -17,7 +18,7 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
             <User size={18} className="text-gray-500" />
-            <span>{user?.name || "User"}</span>
+            <span>{user || "User"}</span>
           </div>
 
           <button
