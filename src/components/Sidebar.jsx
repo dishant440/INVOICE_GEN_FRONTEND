@@ -1,4 +1,4 @@
-import { LayoutDashboard, FileText } from "lucide-react";
+import { LayoutDashboard, FileText, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
@@ -15,6 +15,11 @@ export default function Sidebar() {
         <Link className="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800" to="/invoices">
           <FileText size={18} />
           Invoices
+        </Link>
+
+        <Link className="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800" to="/users">
+          <Users size={18} />
+          Users
         </Link>
       </nav>
     </aside>
